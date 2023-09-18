@@ -4680,6 +4680,7 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0;
   }
+  
 }
 
 @media (min-width: 576px) {
@@ -4722,6 +4723,8 @@ input[type="button"].btn-block {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    display: none;
+
   }
   .navbar-expand-sm .navbar-toggler {
     display: none;
@@ -5040,6 +5043,13 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
+}
+
+/* Media query to hide navbar on mobile screens */
+@media (max-width: 575.98px) {
+  .navbar-dark .navbar-collapse{
+    display: none; /* Hide the navbar for screens with a max width of 575.98px (mobile devices) */
+  }
 }
 
 .card {
@@ -12256,6 +12266,12 @@ pre .code {
 
 }
 
+@media (max-width: 575.98px) {
+  .about-img-holder{
+    max-width: 30px; /* Adjust the max-width as per your preference for mobile view */
+  }
+}
+
 .about-caption {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -12274,8 +12290,8 @@ pre .code {
   }
   .about-img-holder {
     max-width: 220px;
-    min-width: 100%;
-    width: 100%;
+    min-width: 50%;
+    width: 50%;
     margin: auto;
     margin-bottom: 20px;
   }
@@ -12393,3 +12409,19 @@ pre .code {
         background-color: #330051; /* Darker purple on hover */
     }
 </style>
+
+@media (max-width: 560px) {
+  .navbar-expand-sm {
+      display: none;
+  }
+}
+
+/* Add a media query for screens with a maximum width of 575.98px (mobile devices) */
+@media (max-width: 575.98px) {
+  /* Hide the navbar by setting the display property to none */
+  .navbar {
+    display: none;
+  }
+  
+  /* If you want to make other adjustments for mobile screens, you can add them here */
+}
