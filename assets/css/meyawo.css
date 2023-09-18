@@ -4736,6 +4736,8 @@ input[type="button"].btn-block {
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+    display: none !important;
+
   }
 }
 
@@ -4781,7 +4783,7 @@ input[type="button"].btn-block {
             flex-basis: auto;
   }
   .navbar-expand-md .navbar-toggler {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -12351,6 +12353,17 @@ pre .code {
   font-size: 25px; /* Adjust the font size to make the icons smaller */
 }
 
+/* Media query for mobile devices */
+@media (max-width: 1000px) {
+  .social-icons {
+    margin-left: 5px; /* Remove left spacing for mobile devices */
+  }
+
+  .social-icons i {
+    font-size: 20px; /* Adjust the font size for mobile devices */
+  }
+}
+
 .portfolio-card {
   text-align: center; /* Center the contents horizontally */
   padding: 20px; /* Add padding to create spacing between all sides of the container */
@@ -12370,31 +12383,30 @@ pre .code {
   overflow: hidden;
 }
 
-<!-- Add this CSS within your <style> tags or in your external CSS file -->
-<style>
-    /* Skills section styles */
-    .skills {
+
+/* Skills section styles */
+.skills {
         margin-top: 20px;
         text-align: center;
     }
 
-    .skills h4 {
+.skills h4 {
         font-size: 20px;
         color: #333;
         margin-bottom: 10px;
     }
 
-    .skills ul {
+.skills ul {
         list-style-type: none;
         padding: 0;
     }
 
-    .skills li {
+.skills li {
         display: inline-block;
         margin: 5px;
     }
 
-    .skills a {
+.skills a {
         display: inline-block;
         background-color: #8E6FAA; /* Light purple background color */
         color: #fff; /* White text color */
@@ -12405,23 +12417,24 @@ pre .code {
         transition: background-color 0.3s ease;
     }
 
-    .skills a:hover {
+.skills a:hover {
         background-color: #330051; /* Darker purple on hover */
     }
-</style>
 
-@media (max-width: 560px) {
-  .navbar-expand-sm {
-      display: none;
+/* Media query for mobile devices */
+@media (max-width: 1000px) {
+  .skills {
+    margin-right : 20px; Remove left spacing for mobile devices
   }
-}
 
-/* Add a media query for screens with a maximum width of 575.98px (mobile devices) */
-@media (max-width: 575.98px) {
-  /* Hide the navbar by setting the display property to none */
-  .navbar {
-    display: none;
+  .skills a{
+    /* padding: 2px 5px; */
+    /* margin : 2px; */
+    font-size: 10px; /* Adjust the font size for mobile devices */
   }
-  
-  /* If you want to make other adjustments for mobile screens, you can add them here */
+
+  .skills li {
+  display: inline-block;
+  margin: 2px;
+  }
 }
