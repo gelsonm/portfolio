@@ -12424,7 +12424,8 @@ pre .code {
 /* Media query for mobile devices */
 @media (max-width: 1000px) {
   .skills {
-    margin-right : 20px; Remove left spacing for mobile devices
+/*     margin-right : 20px; 
+  */
   }
 
   .skills a{
